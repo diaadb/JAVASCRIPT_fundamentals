@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tasks 1 to 8</title>
+</head>
+<body>
+    <script>
+        alert( null || 2 || undefined ); //2
+        alert( alert(1) || 2 || alert(3) ); //1,2
+        alert( alert(1) && alert(2) ); //1,undefined
+        alert( null || 2 && 3 || 4 );//3
+        if (age >= 14 && age <= 90);
+        if (!(age >= 14 && age <= 90));
+        if(age < 14 || age > 90);
+        if (-1 || 0) alert( 'first' ); //-1 ||0 =-1 (truthy) so runs
+        if (-1 && 0) alert( 'second' ); //-1 &&0=0(falsy) so doesn't run
+        if (null || -1 && 1) alert( 'third' ); // && higher precedence , so -1&&1=1 (truthy) so runs
+    </script>
+</body>
+</html>
