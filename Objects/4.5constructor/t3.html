@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // Constructor function for Accumulator
+    function Accumulator(startingValue) {
+        this.value = startingValue; // Set the initial value
+
+    // Method to read user input and add it to the current value
+        this.read = function() {
+            this.value += +prompt("Enter a number:", 0); // Convert input to number and add to value
+        };
+    }
+
+    // accumulator with an initial value of 1
+    let accumulator = new Accumulator(1);
+
+    accumulator.read(); // User enters a number and it gets added to value
+    accumulator.read(); // User enters another number, it gets added
+
+    alert(accumulator.value); // Show the total sum
+
+   </script> 
+</body>
+</html>
