@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Constructor function for creating a calculator object
+    function Calculator() {
+
+        // Method to read two numbers from user input
+        this.read = function() {
+            this.a = +prompt('a?', 0); // Prompt user for first number and convert to number
+            this.b = +prompt('b?', 0); // Prompt user for second number and convert to number
+        };
+
+        // Method to return the sum of the two numbers
+        this.sum = function() {
+            return this.a + this.b; // Add the two numbers and return the result
+        };
+
+        // Method to return the product of the two numbers
+        this.mul = function() {
+            return this.a * this.b; // Multiply the two numbers and return the result
+        };
+    }
+
+        // Create a new calculator object
+        let calculator = new Calculator();
+
+        // Call the read method to get user input
+        calculator.read();
+
+        // Show the sum of the entered numbers
+        alert( "Sum=" + calculator.sum() );
+
+        // Show the product of the entered numbers
+        alert( "Mul=" + calculator.mul() );
+
+    </script>
+</body>
+</html>

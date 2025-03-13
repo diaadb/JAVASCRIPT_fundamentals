@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {}; // A shared object
+        function A() {
+            return obj; // Always return the same object
+        }
+
+        function B() {
+            return obj; // Always return the same object
+        }
+
+        let a = new A();
+        let b = new B();
+
+        alert(a == b); // true
+
+    </script>
+</body>
+</html>
