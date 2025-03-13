@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let calculator = {
+            sum() {
+                return this.a + this.b;
+            },
+            
+            mul() {
+                return this.a * this.b;
+            },
+            
+            read() {
+                this.a = +prompt('enter the first number a', 0);
+                this.b = +prompt('enter the second number b', 0);
+            }
+        };
+
+        calculator.read(); //gets the value of a and b stored in this.a and this.b
+
+        alert( calculator.sum() ); //add a and b to get the sum
+        alert( calculator.mul() ); // multiplies a and b to get the product
+    </script>
+</body>
+</html>

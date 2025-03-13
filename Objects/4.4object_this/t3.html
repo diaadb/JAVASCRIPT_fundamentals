@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ladder = {
+            step: 0,
+            
+            up() {
+                this.step++;  // Move up
+                return this;  // Return the ladder object itself
+              },
+
+            down() {
+                this.step--;  // Move down
+                return this;  // Return the ladder object itself
+              },
+
+            showStep() {
+                alert(this.step); // Show the current step
+                return this;  // Return the ladder object itself
+                }
+            };
+
+    </script>
+</body>
+</html>

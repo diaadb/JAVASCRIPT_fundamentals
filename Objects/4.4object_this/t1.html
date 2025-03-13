@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeUser() {
+            return {
+                name: "John", // ref is now a method (a function inside the object)
+            ref() {
+            return this; // 'this' refers to the object itself
+                }
+            };
+        }
+
+        let user = makeUser(); // The function returns an object and assigns it to 'user'
+
+        alert(user.ref().name); // 'user.ref()' returns the object itself, so 'user.ref().name' is "John"
+
+    </script>
+</body>
+</html>
