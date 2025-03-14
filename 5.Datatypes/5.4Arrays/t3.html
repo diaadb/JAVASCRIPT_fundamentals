@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["a", "b"];
+
+        arr.push(function() {
+            alert( this );
+        });
+
+        arr[2]();// here the array is updated with the function as the third element 
+        //on alert, this inside the alert refers to the array itself thus returning all elements of array as a string.
+    </script>
+</body>
+</html>
