@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ucFirst(str) {
+            if (!str) return str; 
+            // Return the original string if it is empty or falsy (e.g., "", null, undefined).
+
+            return str[0].toUpperCase() + str.slice(1);
+            // Convert the first letter to uppercase and concatenate it with the rest of the string.
+        } 
+
+        alert(ucFirst("john")); // Displays: "John"
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkSpam(str) {
+            let lowerStr = str.toLowerCase(); //convert the string to lowercase
+            return lowerStr.includes('viagra') || lowerStr.includes('xxx'); // check whether it has the word viagra or xxx
+        }   
+
+        alert( checkSpam('buy ViAgRA now') ); // true
+        alert( checkSpam('free xxxxx') ); // true
+        alert( checkSpam("innocent rabbit") ); // false
+        
+    </script>
+</body>
+</html>
