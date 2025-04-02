@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function spy(func) {
+             function wrapper(...args) {
+             // using ...args instead of arguments ( store the real array in wrapper)
+                wrapper.calls.push(args); //push the arguments to wrapper
+                return func.apply(this, args);
+            }
+
+            wrapper.calls = [];//empty array initialization
+
+            return wrapper;
+        }
+
+    </script>
+</body>
+</html>
