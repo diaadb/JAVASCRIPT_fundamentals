@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //a class clock is defined
+        class Clock {
+            constructor({ template }) {
+                this.template = template; //template is a string stored in the object
+            }
+        
+        render() {
+            //gets the current time using inbuilt Date object
+            let date = new Date();
+
+            //extract hours,minutes and seconds
+            let hours = date.getHours();
+            //if any less than 10, add a zero in front
+            if (hours < 10) hours = '0' + hours;
+            let mins = date.getMinutes();
+            if (mins < 10) mins = '0' + mins;
+            let secs = date.getSeconds();
+            if (secs < 10) secs = '0' + secs;
+
+            //replace h,m,s in template with actual values
+            let output = this.template
+            .replace('h', hours)
+            .replace('m', mins)
+            .replace('s', secs);
+
+            //print the time in console
+            console.log(output);
+        }
+
+        stop() {
+            clearInterval(this.timer); //stops the click by clearing the interval timer
+        }
+
+        start() {
+            this.render();//shows time immediately
+            this.timer = setInterval(() => this.render(), 1000);//sets a timer that calls render every second
+        }
+        }
+
+        let clock = new Clock({template: 'h:m:s'}); // new clock object created with template h:m:s
+        clock.start();//starts the clock
+        
+    </script>
+</body>
+</html>
