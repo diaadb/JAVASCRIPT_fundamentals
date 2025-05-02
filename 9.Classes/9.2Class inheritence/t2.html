@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class ExtendedClock extends Clock {
+        constructor(options) {
+            super(options);//calls the parent clock constructor
+            
+            let { precision = 1000 } = options;
+            this.precision = precision;//stores how often to update 
+        }
+
+        start() {
+            this.render();
+            this.timer = setInterval(() => this.render(), this.precision);//uses this.precision instead of 1000
+        }
+    };
+    </script>
+</body>
+</html>
