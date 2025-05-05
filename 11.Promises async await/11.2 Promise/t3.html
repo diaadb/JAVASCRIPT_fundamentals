@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         return new Promise(resolve => {
+        // Start animation in next event loop tick
+        setTimeout(() => {
+          div.style.width = radius * 2 + 'px';
+          div.style.height = radius * 2 + 'px';
+
+          // Wait for the transition to end
+          div.addEventListener('transitionend', function handler() {
+            div.removeEventListener('transitionend', handler); // Clean up
+            resolve(div); // Resolve promise with the circle div
+          });
+        }, 0);
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise = new Promise(function(resolve, reject) {
+            resolve(1);
+            setTimeout(() => resolve(2), 1000);
+        });
+
+        promise.then(alert);// the output is 1 and the second call to resolve is ignored as only the first call of resolve/reject is taken into account
+    </script>
+</body>
+</html>
