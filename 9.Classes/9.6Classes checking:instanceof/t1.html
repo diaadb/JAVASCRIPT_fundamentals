@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function A() {}
+        function B() {}
+
+        // Both A.prototype and B.prototype point to the same empty object
+        A.prototype = B.prototype = {};
+
+        let a = new A();  
+        //  a.__proto__ is set to A.prototype
+
+        alert( a instanceof B ); 
+        // true, because 'instanceof' checks whether B.prototype is in the prototype chain of 'a'
+
+    </script>
+</body>
+</html>
