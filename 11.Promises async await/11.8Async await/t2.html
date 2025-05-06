@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class HttpError extends Error {
+            constructor(response) {
+                super(`${response.status} for ${response.url}`);
+                this.name = 'HttpError';
+                this.response = response;
+            }
+        }
+        device-width
+        async function loadJson(url) { //made async function
+            let response = await fetch(url);
+            if (response.status == 200) {
+                let json = await response.json(); 
+                return json;
+            }
+            throw new HttpError(response);
+        }
+
+        async function demoGithubUser(){
+            let user;
+            while (true){
+                let name = prompt("Enter a name?", "iliakan");//asks for the name 
+                try {
+                    user = await loadJson(`https://api.github.com/users/${name}`);//loadJson tries to fetch the github user data
+                    break;// if successful, stores the data and exits the loop
+                } catch(err) {
+                    if (err instanceof HttpError && err.response.status == 404) {
+                        alert("No such user, please reenter");
+                    } else {
+                        throw err;//rethrows the error
+                    }
+                }
+            }
+            alert(`Full name: ${user.name}.`);// after getting the name, gives the full name
+            return user; // returns the user object
+        }
+
+        demoGithubUser(); 
+    </script>
+</body>
+</html>
