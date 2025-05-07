@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let body = document.body;
+      
+        body.innerHTML = "<!--" + body.tagName + "-->";//the content of body is replaced with the comment <!--BODY--> as tagname is always uppercase
+      
+        alert( body.firstChild.data ); //the first child of body is the comment <!--BODY--> and the data property of it is BODY.
+      </script>
+</body>
+</html>
