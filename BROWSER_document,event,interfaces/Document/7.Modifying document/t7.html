@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="calender"></div>
+<script>
+    function createCalender(elem,year,month) {
+        let mon=month-1//months in js are numbered from 0
+        let d=new Date(year,mon)//creating a date object with the given year and month
+
+
+        let table='<table><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></table>'
+        
+
+        for (let i=0;i<getDay(d);i++){
+            table+=<td></td> //gets the day ( number 0,1,2..) and adds empty cells till that day
+        }
+
+
+        
+
+    }
+</script>
+</body>
+</html>
