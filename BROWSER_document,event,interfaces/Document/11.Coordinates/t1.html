@@ -68,11 +68,15 @@
     let coords=elem.getBoundingClientRect();
     let answer1=[coords.left,coords.top]
     let answer2=[coords.right,coords.bottom]
+    let answer3 = [coords.left + field.clientLeft, coords.top + field.clientTop];
+    let answer4 = [coords.left + elem.clientLeft + elem.clientWidth, coords.top + elem.clientTop + elem.clientHeight];
 
 
     
-   console.log("Outer Top-Left:", outerTopLeft);
-   console.log("Outer Bottom-Right:", outerBottomRight);
+   console.log("Outer Top-Left:", answer1);
+   console.log("Outer Bottom-Right:",answer2);
+   console.log("Inner Top-Left:",answer3);
+   console.log("Inner Bottom-Right:",answer4);
 
   </script>
 
