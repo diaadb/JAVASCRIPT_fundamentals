@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function getscrollBottom(elem){
+        if(elem.scrollHeight<=elem.clientHeight||elem.scrollTop>=elem.scrollHeight-elem.clientHeight){
+            return 0;
+        }
+        return elem.scrollHeight-elem.scrollTop-elem.clientHeight
+    }
+ /* scrollHeight gives the entire content width ( the hidden content also), 
+  scrollTop gives the scrolled distance from the top
+ clientHeight gives the height of the visible part of the total content*/
+   
+   </script>
+</body>
+</html>

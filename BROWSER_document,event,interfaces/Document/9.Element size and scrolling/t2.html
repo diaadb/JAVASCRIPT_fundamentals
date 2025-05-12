@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       let div= document.createElement('div')//create a div element
+       div.style.overflowY='scroll'//force a vertical scrollbar
+       div.style.width='50px'
+       div.style.height='50px'
+       document.body.append(div)//add it to the DOM
+       let scrollWidth=div.offsetWidth-div.clientWidth//calculate scrollbar width
+       div.remove();//remove the div element
+       alert(scrollWidth)//alert the result
+
+
+    </script>
+</body>
+</html>
