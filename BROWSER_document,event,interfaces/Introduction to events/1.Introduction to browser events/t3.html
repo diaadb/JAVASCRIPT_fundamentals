@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        button.addEventListener("click", () => alert("1"));
+        button.removeEventListener("click", () => alert("1"));
+        button.onclick = () => alert(2);
+
+
+        //the first line adds an event listener that triggers the alert 1
+        //the second line attempt to remove the event listener but the function passed is an anonymous function and thus fails to do so
+        //new onclick handler is setup which alerts 2
+        //finally alerts 1 and 2.
+        
+        
+        
+        </script>
+
+
+</body>
+</html>
