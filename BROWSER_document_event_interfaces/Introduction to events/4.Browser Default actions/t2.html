@@ -21,16 +21,14 @@
 
   <script>
     contents.onclick=function(event){
-        function handlelink(href){
-            let isLeaving=confirm(`leave for ${href}?`)
-            if(!isLeaving)return false;
-        }
-        
-        let target=event.target.closest('a')
-        if(target&&contents.contains(target)){
-            return handlelink(target.getAttribute('href'))
-        }
-
+      function handleLink(href){
+        let isLeaving=confirm(`leave for ${href}`)
+        if(!isLeaving)return false;
+      }
+      let target=event.target.closest('a')
+      if(target && contents.contains(target)){
+        return handleLink(target.getAttribute('href'))
+      }
     }
   </script>
 </body>
