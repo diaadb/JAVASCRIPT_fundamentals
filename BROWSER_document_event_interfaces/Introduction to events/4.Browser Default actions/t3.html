@@ -30,5 +30,19 @@
     </li>
   </ul>
 
+
+  <script>
+  thumbs.onclick=function(event){
+    thumbNail=event.target.closest('a')
+    if(!thumbNail)return;
+    showThumbnail(thumbnail.href,thumbnail.title);
+    event.preventDefault();
+  }
+  
+  function showThumbnail(href,title){
+    largeImg.src=href;
+    largeImg.alt=title;
+  }
+  </script>
 </body>
 </html>
