@@ -46,10 +46,12 @@
             if(newLeft<0){
                 newLeft=0
             }
+
             let rightedge= slider.offsetWidth-thumb.offsetWidth
             if(newLeft>rightedge){
                 newLeft=rightedge
             }
+            
             thumb.style.left=newLeft+'px'
         }
 
