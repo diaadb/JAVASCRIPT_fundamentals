@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+<h1>Scroll me</h1>
+
+<script>
+  function populate() {
+
+    while(true) {
+      
+      let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;//how far the bottom of the document is from the top of the screen
+      if (windowRelativeBottom > document.documentElement.clientHeight + 100) break;
+      document.body.insertAdjacentHTML("beforeend", `<p>Date: ${new Date()} </p>`);
+    }
+  }
+
+  window.addEventListener('scroll', populate);
+
+  populate();
+</script>
+
+</body>
+</html>
